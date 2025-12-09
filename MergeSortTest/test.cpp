@@ -1,5 +1,5 @@
 #include "pch.h" 
-#include "../MergeSort.h" 
+#include "../MergeSort.cpp"
 #include <vector>
 #include <algorithm>
 #include <random>
