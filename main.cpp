@@ -2,7 +2,30 @@
 #include <vector>
 #include "MergeSort.h"
 
-// Funkcja pomocnicza do wyświetlania wektora
+/**
+ * @file main.cpp
+ * @brief Prosty przykład użycia klasy MergeSort z demonstracją działania.
+ *
+ * Plik zawiera funkcję pomocniczą `printArray` do wypisywania zawartości
+ * wektora oraz funkcję `main`, która demonstruje sortowanie wektorów typów
+ * `int` oraz `double` przy użyciu szablonu `MergeSort<T>`.
+ *
+ * Cel:
+ * - Zaprezentować użycie klasy `MergeSort` w praktycznym przykładzie.
+ * - Umożliwić szybkie ręczne testy oraz obserwację stabilności i poprawności
+ *   sortowania.
+ */
+
+/**
+ * @brief Wypisuje elementy wektora na standardowe wyjście.
+ *
+ * Funkcja pomocnicza używana jedynie dla celów demonstracyjnych w `main`.
+ * Elementy są wypisywane w jednej linii, rozdzielone spacjami, a następnie
+ * kończone znakiem nowej linii.
+ *
+ * @tparam T Typ elementów wektora; powinien mieć zdefiniowany operator<<.
+ * @param arr Stała referencja do wektora do wypisania.
+ */
 template <typename T>
 void printArray(const std::vector<T>& arr) {
     for (const auto& val : arr) {
@@ -11,6 +34,23 @@ void printArray(const std::vector<T>& arr) {
     std::cout << std::endl;
 }
 
+/**
+ * @brief Punkt wejścia programu demonstrujący Merge Sort.
+ *
+ * Program:
+ * 1. Tworzy przykładowe wektory `int` i `double`.
+ * 2. Wypisuje zawartość przed sortowaniem.
+ * 3. Wywołuje `MergeSort<T>::sort` aby posortować wektory w miejscu.
+ * 4. Wypisuje zawartość po sortowaniu.
+ *
+ * Uwaga:
+ * - Program jest demonstracją i nie obsługuje wejścia z linii poleceń.
+ * - Aby testować inne typy, należy dodać jawne instancje szablonu w
+ *   `MergeSort.cpp` (np. `template class MergeSort<float>;`) lub przenieść
+ *   definicje do nagłówka.
+ *
+ * @return Zwraca 0 w przypadku poprawnego zakończenia.
+ */
 int main() {
     std::cout << "=== DEMONSTRACJA ALGORYTMU MERGE SORT ===" << std::endl;
 
